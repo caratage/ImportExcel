@@ -15,7 +15,7 @@
                 2  {$pos = "$Sign #,##0.00" ; break }
                 3  {$pos = "#,##0.00 $Sign" ; break }
             }
-            switch ([cultureinfo]::CurrentCulture.NumberFormat.CurrencyPositivePattern) {
+            switch ([cultureinfo]::CurrentCulture.NumberFormat.CurrencyNegativePattern) {
                 0  {return "$pos;($Sign#,##0.00)"  }
                 1  {return "$pos;-$Sign#,##0.00"   }
                 2  {return "$pos;$Sign-#,##0.00"   }
